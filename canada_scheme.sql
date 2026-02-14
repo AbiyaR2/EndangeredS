@@ -1,4 +1,4 @@
-PRAGMA foreign_keys = ON;
+INT AUTO_INCREMENT PRIMARY KEY
 
 -- MAP HOTSPOTS (pins)
 CREATE TABLE hotspots (
