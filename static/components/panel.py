@@ -19,7 +19,7 @@ def register_panel_callbacks(app, ISO_FIELD, risk_to_color):
             return "Click a country to see details."
 
         props = feature.get("properties", {})
-        name = props.get("ADMIN") or props.get("NAME") or "Unknown"
+        name = props.get("name") or props.get("ADMIN") or props.get("NAME") or "Unknown"
         iso3 = props.get(ISO_FIELD) or "—"
         status = props.get("_status", "No data")
         summary = props.get("_summary", "No information available.")
