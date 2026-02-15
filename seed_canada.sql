@@ -50,3 +50,59 @@ INSERT INTO cultures (hotspot_id, culture_name, short_history, why_endangered, w
  'Small number of fluent speakers reported in recent coverage; revitalization efforts ongoing.',
  'language,oral-history,land-knowledge,ceremonies', 'high',
  'Recent reporting highlights urgency and revitalization.');
+
+-- =====================
+-- CANADA: LANGUAGE
+-- =====================
+
+INSERT INTO language_phrases (culture_id, phrase_native, phrase_english, phonetic, notes) VALUES
+(1, 'Háw\'aa', 'Thank you', 'HAH-wah', 'Used to show gratitude in Haida'),
+(1, 'Sk\'áang', 'Friend', 'SKAH-ang', 'Friendly greeting'),
+
+(2, 'Núyem', 'Hello', 'NOO-yem', 'Traditional Nuxalk greeting'),
+
+(3, 'Oki', 'Hello', 'OH-kee', 'Common Blackfoot greeting'),
+
+(4, 'Tânisi', 'Hello', 'TAH-nee-see', 'Cree greeting'),
+
+(5, 'Kuei', 'Hello', 'KWAY', 'Innu greeting'),
+
+(6, 'Skennen’kó:wa', 'Peace', 'SKEH-nen-go-wa', 'Mohawk word for peace'),
+
+(7, 'Tawnshi', 'Hello', 'TOWN-shee', 'Michif greeting'),
+
+(8, 'Gilakas’la', 'Thank you', 'gee-LAH-kahs-la', 'Heiltsuk thank you');
+
+-- =====================
+-- CANADA: TRADITIONS
+-- =====================
+
+INSERT INTO traditions (culture_id, category, title, description) VALUES
+(1, 'craft', 'Haida Totem Carving', 'Large cedar poles carved to represent family lineage, spiritual stories, and historical events.'),
+(1, 'ceremony', 'Potlatch Ceremony', 'Community gathering celebrating births, marriages, and leadership transitions.'),
+
+(3, 'craft', 'Blackfoot Beadwork', 'Intricate designs sewn onto clothing and regalia, each pattern holding cultural meaning.'),
+
+(4, 'ceremony', 'Cree Seasonal Ceremonies', 'Ceremonies honoring the land and animals at key times of the year.'),
+
+(7, 'food', 'Michif Bannock', 'Traditional bread cooked during family gatherings and celebrations.'),
+
+(8, 'craft', 'Heiltsuk Weaving', 'Basket weaving using cedar bark and plant fibers for ceremonial and daily use.');
+
+-- =====================
+-- CANADA: STORIES
+-- =====================
+
+INSERT INTO stories (culture_id, title, story_text, contributor, status) VALUES
+(1, 'Learning to Carve with My Grandfather',
+'When I was young, my grandfather would take me into the forest to choose cedar trees for carving. He told me that every tree had a spirit and a story. As we carved together, he explained the meaning behind each animal figure — the eagle for strength, the raven for creation. Today, I teach my children the same way, so our stories will not be forgotten.',
+'Haida community member', 'approved'),
+
+(4, 'Speaking Cree at Home',
+'My parents made a decision to speak Cree at home even when English became common in school. At first it was difficult, but slowly I began to understand the songs and stories my grandmother shared. Now I speak Cree with my own children so they can grow up knowing who they are and where they come from.',
+'Cree elder', 'approved'),
+
+(7, 'Keeping Michif Alive',
+'When I was growing up, very few people my age could speak Michif. Our community started weekly language nights where elders taught us simple phrases and traditional songs. Those evenings became more than lessons — they became moments of connection between generations.',
+'Métis youth', 'approved');
+

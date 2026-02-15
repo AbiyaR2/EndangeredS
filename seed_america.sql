@@ -61,3 +61,43 @@ INSERT INTO cultures (hotspot_id, culture_name, short_history, why_endangered, w
  'Deforestation and modernization pressures on traditional lifestyle.',
  'language,crafts,ceremonies,plant-medicine,oral-history', 'high',
  'Shipibo culture increasingly threatened by land loss.');
+
+
+-- =====================
+-- USA: LANGUAGE
+-- =====================
+
+INSERT INTO language_phrases (culture_id, phrase_native, phrase_english, phonetic, notes) VALUES
+(9, 'Yáʼátʼééh', 'Hello', 'YAH-ah-teh', 'Navajo greeting'),
+
+(10, 'Hau', 'Hello', 'HOW', 'Lakota greeting'),
+
+(11, 'Osiyo', 'Hello', 'oh-SEE-yo', 'Cherokee greeting');
+
+-- =====================
+-- USA: TRADITIONS
+-- =====================
+
+INSERT INTO traditions (culture_id, category, title, description) VALUES
+(9, 'ceremony', 'Navajo Blessing Way', 'Healing ceremony restoring balance and harmony in life.'),
+
+(10, 'ceremony', 'Sun Dance', 'Sacred ceremony symbolizing renewal and spiritual strength.'),
+
+(11, 'craft', 'Cherokee Basket Weaving', 'Handwoven baskets used for daily life and ceremonial purposes.');
+
+-- =====================
+-- USA: STORIES
+-- =====================
+
+INSERT INTO stories (culture_id, title, story_text, contributor, status) VALUES
+(9, 'Walking in Beauty',
+'My grandmother taught me that every day should begin by greeting the sun and thanking the earth. She called this walking in beauty — living in harmony with nature and people. Even now, when life feels busy, I pause each morning to remember her words.',
+'Navajo community member', 'approved'),
+
+(10, 'The Power of the Drum',
+'During ceremonies, the drumbeat represents the heartbeat of our people. As a child I sat beside my father listening to the rhythm guide our prayers. The drum connects us to our ancestors and reminds us that we are never alone.',
+'Lakota elder', 'approved'),
+
+(11, 'Our Language, Our Strength',
+'When schools once punished children for speaking Cherokee, many families stopped teaching it. Today our community works hard to bring the language back through immersion schools and storytelling sessions. Every new speaker feels like hope for the future.',
+'Cherokee teacher', 'approved');
