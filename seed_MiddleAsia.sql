@@ -79,8 +79,21 @@ INSERT INTO traditions (culture_id, category, title, description, image_path) VA
 
 
 -- STORIES
+-- STORIES (expanded for Middle Asia)
 INSERT INTO stories (culture_id, title, story_text, contributor, status) VALUES
-(1, 'Horseback Tales', 'My grandfather taught me stories of our ancestors while riding across the steppe.', 'Community member', 'approved'),
-(3, 'Karakalpak Weddings', 'Weddings are full of music, dance, and storytelling that keep our culture alive.', 'Community member', 'approved'),
-(5, 'Wakhi Folk Songs', 'We sing traditional songs in the mountains during festivals.', 'Community member', 'approved'),
-(9, 'Learning Yaghnobi', 'I try to memorize our old poems from my father to keep the language alive.', 'Community member', 'approved');
+
+(1, 'Horseback Tales', 
+'Every morning, I ride across the vast steppes with my grandfather, feeling the wind on my face as the horses gallop. Along the way, he tells me stories of our ancestors—great warriors, hunters, and leaders who shaped our community. Each tale carries lessons about courage, loyalty, and living in harmony with the land. I remember the way he would point to distant mountains and say, "That ridge was crossed by your great-great-grandfather during a winter migration." These stories are not just entertainment—they are a guide for life, teaching me patience, respect, and the history of our people while I learn to ride with skill and confidence.', 
+'Community member', 'approved'),
+
+(3, 'Karakalpak Weddings', 
+'Weddings in our Karakalpak community are vibrant celebrations that last for days. Music fills the air as we dance together, while elders tell stories about the origins of each ritual and the history of our people. I remember the women weaving colorful patterns into garments and the men reciting poems that honor the ancestors. Every song and dance carries meaning, reminding us of our shared past and the values that bind us. Participating in these weddings, I feel connected to generations of Karakalpak families, learning not just the celebrations but the stories, responsibilities, and pride that come with them.', 
+'Community member', 'approved'),
+
+(5, 'Wakhi Folk Songs', 
+'In the high mountains where the air is crisp and the valleys echo with the sound of streams, our community gathers during festivals to sing traditional Wakhi songs. I remember standing beside my father, learning the lyrics and melodies that have been passed down for generations. Each song tells stories of love, migration, and the struggles of our ancestors. As we sing, elders explain the symbolism in every verse, and the younger children join in, learning the rhythms with claps and footwork. These songs are more than music—they are a way to remember, honor, and connect our community through time.', 
+'Community member', 'approved'),
+
+(9, 'Learning Yaghnobi', 
+'At home, I sit with my father in the warm sunlight streaming through the window, reciting old Yaghnobi poems line by line. He explains the meaning of each word, the stories behind the verses, and the cultural lessons embedded within them. Sometimes we walk through the village, and he points to landmarks that feature in our ancestors’ tales, repeating the poems as a way to keep them alive. I feel the weight of responsibility to preserve our language and traditions, understanding that every word spoken today is a bridge to the past. Through these poems, I not only learn to speak Yaghnobi fluently but also carry forward the memory and identity of our people.', 
+'Community member', 'approved');

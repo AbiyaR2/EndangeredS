@@ -79,9 +79,21 @@ INSERT INTO traditions (culture_id, category, title, description, image_path) VA
 (9, 'ceremony', 'Dragon Tree Rituals', 'Traditional Soqotri ecological ceremonies tied to endemic plants.', NULL);
 
 
--- STORIES
+-- STORIES (expanded for West Asia)
 INSERT INTO stories (culture_id, title, story_text, contributor, status) VALUES
-(1, 'Learning Kurdish Songs', 'My grandmother taught me the old Kurdish songs before we moved to the city.', 'Community member', 'approved'),
-(3, 'Yazidi Epics', 'We gather every week to recite the sacred Yazidi epics.', 'Community member', 'approved'),
-(6, 'Palestinian Folk Tales', 'Our village elders tell stories of our ancestors and traditional harvests.', 'Community member', 'approved'),
-(9, 'Soqotri Oral Poetry', 'Every evening we chant poems about the island and our goats.', 'Community member', 'approved');
+
+(1, 'Learning Kurdish Songs',
+'Before we moved to the city, my grandmother would sit with me in the courtyard at sunset and teach me the old Kurdish songs she learned from her mother. She explained the meaning behind each verse — songs about love, exile, mountains, and resistance. Sometimes she would pause to tell me the story of where the song came from or who first sang it. Even now, when I hum those melodies in the busy streets of the city, I feel connected to our village, our language, and the generations who carried these songs before me. I keep practicing them so that one day I can pass them on to my own children.',
+'Community member', 'approved'),
+
+(3, 'Yazidi Epics',
+'Each week, families in our community gather in a relative’s home to recite the sacred Yazidi epics. The elders lead the recitations slowly, ensuring every word is spoken correctly, while younger members listen and repeat the lines. Between verses, stories are shared about our history, our migrations, and the lessons contained within the epics. The gatherings are quiet but powerful, filled with a sense of continuity and reverence. For me, these evenings are a reminder that our culture lives not only in books but in voices, memory, and shared ritual.',
+'Community member', 'approved'),
+
+(6, 'Palestinian Folk Tales',
+'In our village, evenings after the harvest are often spent gathered together while elders tell stories of our ancestors, the olive groves, and the traditions that shaped our lives. They speak about old farming methods, wedding celebrations, and the way the community once came together to help one another during difficult seasons. As children, we listen closely, sometimes asking questions about places and people we have never seen. These stories help us understand where we come from and why our traditions matter, reminding us that our identity is rooted in memory, land, and shared experience.',
+'Community member', 'approved'),
+
+(9, 'Soqotri Oral Poetry',
+'Every evening on the island, our family sits outside as the air cools and the sky fills with stars. The elders chant Soqotri poems about the sea, the mountains, and the goats that sustain our livelihood. Each poem carries knowledge about weather, seasons, and the relationship between people and nature. As I repeat the verses, I learn not only the language but also how our ancestors understood the island’s rhythms. These nightly recitations feel like a living classroom, where poetry becomes both memory and guidance for the future.',
+'Community member', 'approved');

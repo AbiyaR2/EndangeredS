@@ -83,11 +83,29 @@ INSERT INTO traditions (culture_id, category, title, description, image_path) VA
 (9, 'craft', 'Ainu Wood Carving', 'Traditional carvings depicting spiritual and daily life.', NULL);
 
 
--- STORIES
+-- STORIES (expanded for East Asia)
 INSERT INTO stories (culture_id, title, story_text, contributor, status) VALUES
-(1, 'Zhuang Folk Tales', 'Elders taught us songs about ancestors during festivals.', 'Community member', 'approved'),
-(2, 'Hani Terraces', 'I learned to build rice terraces from my father and grandfather.', 'Community member', 'approved'),
-(4, 'Ryukyuan Drums', 'We practice drum dances every festival to honor our ancestors.', 'Community member', 'approved'),
-(5, 'Tsaatan Life', 'I herd reindeer with my family and perform rituals in the winter.', 'Community member', 'approved'),
-(7, 'Haenyeo Lessons', 'I learned diving from my mother; our traditions must continue.', 'Community member', 'approved'),
-(9, 'Ainu Songs', 'My grandmother taught me songs in Ainu to keep our language alive.', 'Community member', 'approved');
+
+(1, 'Zhuang Folk Tales', 
+'Every year during the festivals, our elders gather the children and the community in the village square, singing songs about our ancestors and telling the stories behind our traditions. I remember sitting by the fire as they explained the meaning of each dance, the symbolism in the costumes, and the lessons carried in the lyrics. These songs teach us about bravery, family bonds, and the land we belong to. I learned not only to sing but to understand the history of our people, and how each melody connects us to generations before me. The excitement of seeing the whole village participate, dancing in unison, makes me proud of our Zhuang heritage.', 
+'Community member', 'approved'),
+
+(2, 'Hani Terraces', 
+'From a young age, I would wake at dawn with my father and grandfather to walk the terraces in the misty mountains of Yunnan. They taught me the careful way to plant the rice, maintain the irrigation channels, and preserve the patterns that have existed for centuries. Alongside the work, they told stories of our ancestors, the spirits that protect the fields, and the festivals that celebrate each harvest. I recall helping my younger siblings learn the songs and chants that accompany planting, understanding that our labor is also a way to honor the generations before us. These stories and practices taught me patience, respect for nature, and the importance of family and community.', 
+'Community member', 'approved'),
+
+(4, 'Ryukyuan Drums', 
+'In Okinawa, our festivals are alive with the sound of taiko drums. I learned from the elders to feel the rhythm of the drum not just with my hands but with my heart. Every festival, we perform dances that tell the stories of our ancestors, the islands, and the spirits that guide us. I remember practicing for hours with my peers, our movements synchronized, the drums echoing across the village, and the elders correcting our steps with gentle guidance. Through these traditions, I feel connected to the generations before me, learning lessons of discipline, pride, and the cultural identity that makes us Ryukyuan.', 
+'Community member', 'approved'),
+
+(5, 'Tsaatan Life', 
+'Life as a Tsaatan herder is intertwined with the rhythm of the seasons. I spend my days tending the reindeer alongside my family, learning the intricate knowledge of migration routes, grazing areas, and the rituals that honor our ancestors. In the long winter nights, we gather around the fire as elders tell stories of the spirits that protect the herd, the bravery of our forebears, and the importance of respect for every living creature. These stories are not just tales—they are instructions for life, teaching me survival skills, community responsibility, and spiritual understanding. I feel a deep connection to the land and to my heritage as I carry these lessons forward.', 
+'Community member', 'approved'),
+
+(7, 'Haenyeo Lessons', 
+'My mother took me into the sea when I was just a child, teaching me the delicate art of free diving. She showed me how to hold my breath, respect the ocean, and honor the traditions of the women who came before us. We dive in silence, guided by gestures and trust, bringing up seafood while reciting songs that celebrate our ancestors. I learned that this is more than a profession—it is a way of life that preserves our identity, values, and community. Watching her perform with skill and dignity inspired me to continue, knowing that every dive connects me to generations of Haenyeo women.', 
+'Community member', 'approved'),
+
+(9, 'Ainu Songs', 
+'My grandmother would sit me on her lap and sing the old songs of the Ainu people. She explained the meaning of every word, the spirits it honored, and the stories it told of the land, animals, and ancestors. Even as I struggled to pronounce some words, she encouraged me, reminding me that every note carried the voice of our history. As we sang together during festivals, I felt the bond between generations, the responsibility to preserve our language, and the pride in our heritage. These songs are more than music—they are the heartbeat of our people, a living connection to our ancestors.', 
+'Community member', 'approved');

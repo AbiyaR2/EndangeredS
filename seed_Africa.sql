@@ -82,11 +82,25 @@ INSERT INTO traditions (culture_id, category, title, description, image_path) VA
 (9, 'ceremony', 'Maasai Eunoto', 'Coming-of-age ceremony for young Maasai men with rituals and communal gatherings.', NULL);
 
 
--- STORIES
+-- STORIES (expanded)
 INSERT INTO stories (culture_id, title, story_text, contributor, status) VALUES
-(1, 'Ogoni River Stories', 'Elders teach us stories of the rivers and forests to preserve knowledge.', 'Community member', 'approved'),
-(2, 'Hamar Festival', 'Our youth still participate in bull-jumping ceremonies with guidance from elders.', 'Community member', 'approved'),
-(4, 'Khoisan Hunting Tales', 'I remember my grandfather showing me traditional tracking skills and songs.', 'Community member', 'approved'),
-(6, 'Dogon Legends', 'Every evening we recite ancient stories passed down through generations.', 'Community member', 'approved'),
-(9, 'Maasai Cattle Stories', 'Stories about cattle and pastoral life guide our daily routines and ceremonies.', 'Community member', 'approved');
 
+(1, 'Ogoni River Stories', 
+'Elders gather us by the riverside at sunset, where the water glistens like molten gold. They tell stories of the river spirits and the forests that once covered our lands, teaching us how to fish, plant, and move respectfully with nature. Every tale carries lessons about courage, unity, and care for the earth. Through these stories, we learn the history of our people, how our ancestors defended the land, and how every river bend and forest clearing has a meaning. It is here that I first felt the connection between my actions and the life around me.', 
+'Community member', 'approved'),
+
+(2, 'Hamar Festival', 
+'During the annual bull-jumping ceremony, our village transforms into a whirlwind of color, music, and movement. The elders explain every ritual step as young men prepare for adulthood. We sing songs that narrate the deeds of our forefathers, drum rhythms echo across the valley, and the women braid their hair with bright beads and cowrie shells. I remember holding my younger brother’s hand as we watched the ceremony, learning the importance of bravery, respect, and community bonds. These moments make me proud of our Hamar heritage and remind me that our traditions must be passed down carefully.', 
+'Community member', 'approved'),
+
+(4, 'Khoisan Hunting Tales', 
+'From early morning, I would walk with my grandfather through the bush, listening to the soft whispers of the wind. He taught me how to track animals, read the patterns of the stars, and identify the medicinal plants hidden in the scrub. Every evening, we would sit around the fire and he would tell stories of the hunters who came before us, the spirits of the land, and the lessons they left behind. These stories were not just entertainment—they were instructions for life, teaching respect for every living being and the balance of nature. Through his stories, I learned patience, skill, and humility.', 
+'Community member', 'approved'),
+
+(6, 'Dogon Legends', 
+'In the shadow of the cliffs, we gather as the sun dips behind the plateau. Our elders begin reciting the legends of our people: how the first ancestors shaped the land, how the stars guide our harvest, and how every village owes its spirit to the gods of the plateau. The tales are full of caution, wisdom, and humor, and each child is expected to remember at least one story each season. I remember the thrill of listening to these epics, the way the drums and flutes accentuated the drama, and how the stories connected us to our past and to each other. These legends are our compass for living in harmony with our land.', 
+'Community member', 'approved'),
+
+(9, 'Maasai Cattle Stories', 
+'Every morning before the sun rises, our elders lead us to the pastures with the cattle, teaching us stories about each clan’s history and the journeys of our ancestors. They tell of great warriors, clever herders, and the spirits that protect our livestock. As we guide the cattle across rivers and plains, the lessons come alive: how to care for animals, respect the environment, and support our community. Each tale is paired with practical advice, and I still recall the excitement of my first storytelling session, feeling the rhythm of the drums and the echo of the elders’ voices against the hills. These stories ensure that our Maasai traditions endure with every generation.', 
+'Community member', 'approved');
