@@ -2,6 +2,10 @@ from dash import Dash
 from components.map_view import load_geojson, apply_styles, build_map, ISO_FIELD
 from components.panel_view import build_panel, register_panel_callbacks
 from components.ui_view import build_layout, build_legend
+from components.data import load_geojson, apply_styles, risk_to_color, ISO_FIELD
+geo = load_geojson()
+geo = apply_styles(geo)
+
 
 # your data + risk_to_color stay here (or move to components/data.py)
 DATA_BY_ISO3 = {
