@@ -94,6 +94,7 @@ for f in geo["features"]:
 # 5) Dash app
 # -----------------------------
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div(
     style={"display": "grid", "gridTemplateColumns": "1fr 340px", "height": "85vh"},
