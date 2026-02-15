@@ -1,6 +1,13 @@
 -- =========================
 -- MySQL Schema for Heritage
 -- =========================
+USE heritage_db;
+
+DROP TABLE IF EXISTS stories;
+DROP TABLE IF EXISTS traditions;
+DROP TABLE IF EXISTS language_phrases;
+DROP TABLE IF EXISTS cultures;
+DROP TABLE IF EXISTS hotspots;
 
 CREATE TABLE hotspots (
   hotspot_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -63,3 +70,13 @@ CREATE TABLE stories (
     REFERENCES cultures(culture_id)
     ON DELETE CASCADE
 );
+
+CREATE INDEX idx_hotspots_country ON hotspots(country);
+CREATE INDEX idx_cultures_hotspot ON cultures(hotspot_id);
+CREATE INDEX idx_phrases_culture ON language_phrases(culture_id);
+CREATE INDEX idx_traditions_culture ON traditions(culture_id);
+CREATE INDEX idx_stories_culture_status ON stories(culture_id, status);
+
+ALTER TABLE hotspots
+ADD UNIQUE KEY uniq_hotspot (country, label);
+
