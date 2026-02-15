@@ -1,3 +1,4 @@
+i# static/components/data.py
 import requests
 
 DATA_BY_ISO3 = {
@@ -9,7 +10,6 @@ DATA_BY_ISO3 = {
 NO_DATA_COLOR = "#d9d9d9"
 ISO_FIELD = "ISO_A3"
 GEOJSON_URL = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
-
 
 def lerp(a, b, t):
     return a + (b - a) * t
@@ -32,31 +32,25 @@ def risk_to_color(score):
 
     if score <= 0.5:
         t = score / 0.5
-        rgb = (
-            lerp(green[0], yellow[0], t),
-            lerp(green[1], yellow[1], t),
-            lerp(green[2], yellow[2], t),
-        )
+        rgb = (lerp(green[0], yellow[0], t),
+               lerp(green[1], yellow[1], t),
+               lerp(green[2], yellow[2], t))
     else:
         t = (score - 0.5) / 0.5
-        rgb = (
-            lerp(yellow[0], red[0], t),
-            lerp(yellow[1], red[1], t),
-            lerp(yellow[2], red[2], t),
-        )
+        rgb = (lerp(yellow[0], red[0], t),
+               lerp(yellow[1], red[1], t),
+               lerp(yellow[2], red[2], t))
 
     return rgb_to_hex(rgb)
-
 
 def load_geojson():
     return requests.get(GEOJSON_URL, timeout=30).json()
 
-
-def apply_styles(geo):
+def apply_styles(geo, data_by_iso3, risk_to_color_fn):
     for f in geo["features"]:
         iso3 = f.get("properties", {}).get(ISO_FIELD)
-        entry = DATA_BY_ISO3.get(iso3, {})
-        score = entry.get("score")
+        entry = data_by_iso3.get(iso3, {})
+        score = entry.get("score", None)
 
         f["properties"]["_score"] = score
         f["properties"]["_status"] = entry.get("status", "No data")
@@ -64,11 +58,10 @@ def apply_styles(geo):
         f["properties"]["_cultures"] = entry.get("cultures", [])
 
         f["properties"]["style"] = {
-            "fillColor": risk_to_color(score),
+            "fillColor": risk_to_color_fn(score),
             "color": "#444444",
             "weight": 1,
             "opacity": 1,
             "fillOpacity": 0.85,
         }
-
     return geo

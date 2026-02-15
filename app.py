@@ -1,36 +1,27 @@
+# app.py
 from dash import Dash
-from components.map_view import load_geojson, apply_styles, build_map, ISO_FIELD
-from components.panel_view import build_panel, register_panel_callbacks
-from components.ui_view import build_layout, build_legend
-from components.data import load_geojson, apply_styles, risk_to_color, ISO_FIELD
-geo = load_geojson()
-geo = apply_styles(geo)
+from static.components.data import load_geojson, apply_styles, ISO_FIELD, risk_to_color, DATA_BY_ISO3
+from static.components.map import build_map
+from static.components.panel import build_panel, register_panel_callbacks
+from static.components.ui import build_layout, build_legend
 
-
-# your data + risk_to_color stay here (or move to components/data.py)
-DATA_BY_ISO3 = {
-    "CAN": {"score": 0.1, "status": "Low", "summary": "Few endangered cultures", "cultures": ["Example A", "Example B"]},
-    "BRA": {"score": 0.8, "status": "High", "summary": "Many endangered cultures", "cultures": ["Example C"]},
-    "USA": {"score": 0.4, "status": "Medium", "summary": "Some endangered cultures", "cultures": []},
-}
-
-# keep your risk_to_color function exactly as you have it
-# (paste it here)
-
-app = Dash(__name__)
+# Dash will load CSS from static/assets/styles.css
+app = Dash(__name__, assets_folder="static/assets")
 server = app.server
 
+# Load + style geojson
 geo = load_geojson()
 geo = apply_styles(geo, DATA_BY_ISO3, risk_to_color)
 
+# Build UI parts
 map_component = build_map(geo)
-panel_component = build_panel()
+legend_component = build_legend()
+panel_component = build_panel(legend_component)
 
+# Layout
 app.layout = build_layout(map_component, panel_component)
 
-# put legend into panel by replacing legendMount, or just include it in build_panel()
-# easiest: edit build_panel() to include build_legend()
-
+# Callbacks
 register_panel_callbacks(app, ISO_FIELD, risk_to_color)
 
 if __name__ == "__main__":

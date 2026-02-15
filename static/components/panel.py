@@ -1,13 +1,14 @@
+ # static/components/panel.py
 from dash import html, Output, Input
 
-def build_panel():
+def build_panel(legend_component):
     return html.Aside(
         className="panel",
         children=[
             html.H3("Country Info", style={"marginTop": 0}),
             html.Div(id="panel", children="Click a country to see details."),
             html.Hr(),
-            html.Div(id="legendMount")  # Person 3 can fill legend here
+            legend_component,
         ],
     )
 

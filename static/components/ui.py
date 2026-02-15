@@ -1,3 +1,4 @@
+ # static/components/ui.py
 from dash import html
 
 def build_layout(map_component, panel_component):
