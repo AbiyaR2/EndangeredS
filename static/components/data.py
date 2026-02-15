@@ -1,4 +1,4 @@
-i# static/components/data.py
+# static/components/data.py
 import requests
 
 DATA_BY_ISO3 = {
